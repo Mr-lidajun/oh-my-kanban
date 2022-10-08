@@ -54,6 +54,8 @@
 
 .kanban-column {
   flex: 1 1;
+  display: flex;
+  flex-direction: column;
   border: 1px solid gray;
   border-radius: 1rem;
 }
@@ -62,6 +64,14 @@
   margin: 0.6rem 1rem;
   padding-bottom: 0.6rem;
   border-bottom: 1px solid gray;
+}
+
+.kanban-column > ul {
+  flex: 1;
+  flex-basis: 0;
+  margin: 1rem;
+  padding: 0;
+  overflow: auto;
 }
 
 .column-todo {
@@ -74,4 +84,24 @@
 
 .cloumn-done {
   background-color: #C0E8BA;
+}
+
+.kanban-card {
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  list-style: none;
+  background-color: rgb(255, 255, 255, 0.4);
+  text-align: left;
+}
+
+.card-title {
+  min-height: 3rem;
+}
+
+.card-status {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #333;
 }
